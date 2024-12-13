@@ -1,0 +1,13 @@
+<html>
+<head>
+</head>
+<body>
+<h1>posts</h1>
+    <ul>
+        {% for post in posts %}
+            <li><a href="{% url 'post_detail' post.pk %}">{{ post.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_post' %}">create post</a>
+</body>
+</html>
